@@ -107,7 +107,7 @@ public class Home extends javax.swing.JFrame {
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
          // Hiển thị thông báo xác nhận trước khi kết thúc chương trình
-    int confirmed = JOptionPane.showConfirmDialog(null, "Bạn có chắc chắn muốn thoát chương trình?", "Xác nhận kết thúc chương trình", JOptionPane.YES_NO_OPTION);
+    int confirmed = JOptionPane.showConfirmDialog(null, "Bạn có chắc chắn muốn đăng xuất tài khoản?", "Xác nhận đăng xuất tài khoản", JOptionPane.YES_NO_OPTION);
 
     if (confirmed == JOptionPane.YES_OPTION) {
         // Kết thúc chương trình

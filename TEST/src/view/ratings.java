@@ -71,14 +71,17 @@ public class ratings extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-      Home homeFrame = new Home(); // tạo một đối tượng JFrame mới
-      homeFrame.setVisible(true); // hiển thị JFrame mới
+        int confirmed = JOptionPane.showConfirmDialog(null, "Bạn có chắc chắn muốn thoát?", "Xác nhận thoát", JOptionPane.YES_NO_OPTION);
+         
+        Home homeFrame = new Home(); // tạo một đối tượng JFrame mới
+        homeFrame.setVisible(true); // hiển thị JFrame mới
       this.dispose(); // đóng JFrame hiện tại        // TODO add your handling code here:
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-     String ID= txtidnguoichoi.getText();
 
+        String ID= txtidnguoichoi.getText();
+    
     // Kiểm tra xem giá trị của trường idNguoiChoi có phải là số không âm hay không
     if (!ID.matches("\\d+")) {
         JOptionPane.showMessageDialog(this, "ID người chơi phải là số nguyên không âm!");

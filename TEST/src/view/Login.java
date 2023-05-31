@@ -93,6 +93,17 @@ public class Login extends javax.swing.JFrame {
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
        String username = txtdangnhap.getText();
        String password = new String(txtmatkhau.getPassword());
+       
+    try {
+        if (password.length() > 6) {
+        // Nếu mật khẩu có độ dài lớn hơn 6 ký tự, ném ra một ngoại lệ với thông báo lỗi phù hợp
+        throw new Exception("Mật khẩu không được quá 6 ký tự");
+    }
+    }
+    catch (Exception e) {
+    // Bắt và xử lý ngoại lệ được ném ra từ khối try
+        JOptionPane.showMessageDialog(rootPane, e.getMessage());
+    }
 
     // Kiểm tra nếu chưa nhập tên đăng nhập hoặc mật khẩu
     if (username.isEmpty() || password.isEmpty()) {

@@ -45,6 +45,12 @@ public class graft extends javax.swing.JFrame {
         jLabel2.setForeground(new java.awt.Color(255, 255, 255));
         jLabel2.setText("Người Chơi 2");
         getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 60, 88, -1));
+
+        txttennguoichoi1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txttennguoichoi1ActionPerformed(evt);
+            }
+        });
         getContentPane().add(txttennguoichoi1, new org.netbeans.lib.awtextra.AbsoluteConstraints(113, 86, 140, -1));
         getContentPane().add(txttennguoichoi2, new org.netbeans.lib.awtextra.AbsoluteConstraints(281, 86, 140, -1));
 
@@ -140,10 +146,16 @@ public class graft extends javax.swing.JFrame {
     }//GEN-LAST:event_txtbatdauActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-      Home homeFrame = new Home(); // tạo một đối tượng JFrame mới
-      homeFrame.setVisible(true); // hiển thị JFrame mới
+        int confirmed = JOptionPane.showConfirmDialog(null, "Bạn có chắc chắn muốn thoát?", "Xác nhận thoát", JOptionPane.YES_NO_OPTION);
+        
+        Home homeFrame = new Home(); // tạo một đối tượng JFrame mới
+        homeFrame.setVisible(true); // hiển thị JFrame mới
       this.dispose();     
     }//GEN-LAST:event_jButton2ActionPerformed
+
+    private void txttennguoichoi1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txttennguoichoi1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txttennguoichoi1ActionPerformed
 
     public static void main(String args[]) {
      
