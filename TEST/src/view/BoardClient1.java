@@ -335,6 +335,11 @@ public final class BoardClient1 extends javax.swing.JFrame {
         jButton3.setText("Trang chủ");
 
         jButton4.setText("Thoát");
+        jButton4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton4ActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -401,12 +406,27 @@ public final class BoardClient1 extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-        // TODO add your handling code here:
+       reload();
+}
+
+   private void reload() {
+    // đóng và mở lại JFrame BoardAI để chạy lại
+    dispose();
+    BoardAI board = new BoardAI();
+    board.setVisible(true);        // TODO add your handling code here:
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jbUndoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbUndoActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jbUndoActionPerformed
+
+    private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
+        int confirmed = JOptionPane.showConfirmDialog(null, "Bạn có chắc chắn muốn thoát?", "Xác nhận thoát", JOptionPane.YES_NO_OPTION);
+        
+        Home homeFrame = new Home(); // tạo một đối tượng JFrame mới
+        homeFrame.setVisible(true); // hiển thị JFrame mới
+      this.dispose(); // đóng JFrame hiện tại        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton4ActionPerformed
     
     /**
      * @param args the command line arguments
